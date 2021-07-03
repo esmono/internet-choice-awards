@@ -26,6 +26,8 @@ So long as `DEBUG=True` is in your `settings.py` file, this will work and also c
 
 ## Running Application
 
+Make sure to set `POSTGRES_DB` and `POSTGRES_PASSWORD` in the `.env` file. These variables will be used to create the postgres instance.
+
 ### Using docker
 
 ```
