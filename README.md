@@ -2,16 +2,16 @@
 
 ## Installation
 
-This project requieres [`pipenv`](https://pypi.org/project/pipenv/) to work properly.
-Documentation describe different methods to install depending on your environment.
+This project requires [`pipenv`](https://pypi.org/project/pipenv/) to work properly.
+Documentation describes different methods to install depending on your environment.
 
-Project commands are defined in the [Makefile](Makefile). `make isntall-dev` will install all project dependencies.
+Project commands are defined in the [Makefile](Makefile). `make install-dev` will install all project dependencies.
 
-Some commands requires [posgresql](https://www.postgresql.org/download/) to be installed locally.
+Some commands require [posgresql](https://www.postgresql.org/download/) to be installed locally.
 
 ## Development
 
-Configuration for local development is expected to live in a `.env` file that is not checked into version control. Use the `.env.example` tocreate your own `.env`.
+Configuration for local development is expected to live in a `.env` file that is not checked into version control. Use the `.env.example` to create your own `.env`.
 
 Run `make test` to run the unit tests and gather coverage information.
 
@@ -41,11 +41,11 @@ docker-compose exec web make create-superuser
 
 Builds, (re)creates, starts, and attaches to containers.
 
-`static` will collect static files. Note that gunicorn will not serve the static files it will be done by nginx.
+`static` will collect static files. Note that gunicorn will not serve the static files; it will be done by nginx.
 
 `loaddata` (optional) will populate the database with sample data.
 
-`create-superuser` (optional) will promp for data to create a staff user.
+`create-superuser` (optional) will prompt for data to create a staff user.
 
 ```
 podman-compose build
